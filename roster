@@ -1,0 +1,32 @@
+# Sample salt-ssh config file
+#web1:
+#  host: 192.168.42.1 # The IP addr or DNS hostname
+#  user: fred         # Remote executions will be executed as user fred
+#  passwd: foobarbaz  # The password to use for login, if omitted, keys are used
+#  sudo: True         # Whether to sudo to root, not enabled by default
+#web2:
+#  host: 192.168.42.2
+
+local:
+  host: localhost
+  port: 22
+  user: ubuntu
+  priv: /home/ubuntu/salt-devops.pem
+  sudo: True
+  tty: True
+
+ubuntu:
+  host: 172.31.23.18
+  port: 22
+  user: ubuntu
+  priv: /home/ubuntu/salt-devops.pem
+  sudo: True
+  tty: True
+
+rhel:
+  host: 172.31.17.68 
+  port: 22
+  user: ec2-user
+  priv: /home/ubuntu/salt-devops.pem
+  sudo: True
+  tty: True
